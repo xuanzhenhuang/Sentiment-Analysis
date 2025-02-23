@@ -1,6 +1,7 @@
 # Sentiment-Analysis
-用Python编写的微调BERT模型做情感极性分类项目，对IMDB影评数据进行数据分析
-<img src="https://github.com/xuanzhenhuang/Sentiment-Analysis/blob/main/image/%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%86%E6%9E%90/1.%E8%AF%84%E5%88%86%E5%88%86%E5%B8%83%E7%9B%B4%E6%96%B9%E5%9B%BE.png?raw=true" width="500px">
+用Python编写的微调BERT模型做情感极性分类项目，对IMDB影评数据进行数据分析，最终你可以收获一个准确率高于百分之九十的分类模型！
+
+<img src="https://github.com/xuanzhenhuang/Sentiment-Analysis/blob/main/image/Predict.png?raw=true" width="1000px">
 
 
 ## 💡 项目介绍
@@ -59,56 +60,40 @@
 4. **实际应用价值**  
    通过情感分析，为电影制片方、营销团队等提供了有价值的用户洞察。
 
+## 🎬 快速开始
+
+### 📝 前提条件
+
+- 如果需要完整的50000条数据可以在[镜像站](https://ai.stanford.edu/~amaas/data/sentiment/)自行下载，为了上传方便，本文提供了数据量为5000条的minidatasets（已经预处理过可直接取用）
+- PyTorch（可以根据自己电脑的配置情况在[PyTorch官网](https://pytorch.org/)安装）
+- CUDA（如果有GPU并且想要用于加速模型训练的话需要自行安装一下CUDA）
+- bert-base-uncased(可以在[huggingface官网](https://huggingface.co/google-bert/bert-base-uncased)将模型下载到本地)
+  > 如果没有办法访问到huggingface官网的话也可以在 [镜像站](https://hf-mirror.com/) 自行安装。
+
+### 🚀 执行顺序
+
+1. **IMDbDataProcessing.py**  
+   如果下载了IMDB源数据的话可以调用该程序将所有txt处理到一张excel表内，如果选择直接用minidatasets的话可以略过
+
+2. **dataAnalysis.ipynb**  
+   对数据进行初步探索性分析（EDA）和可视化分析
+
+3. **SentimentAnalysis.ipynb**  
+   创建模型并对模型进行微调训练以及验证，并进行实际的应用查看模型的预测效果。
+
+4. **IMDbDataCrawler.ipynb**  
+   在IMDB官网上抓取2021-2025年的十部电影的累计921条数据
+
+5. **SaveBestModel.py**  
+   可以试验多个模型并最终保存效果最优的模型到本地，便于后续调用
+
+6. **dataAnalysis.ipynb**  
+   同样对抓取到的数据进行初步探索性分析（EDA）和可视化分析
+
+7. **Model_Prediction.ipynb**  
+   调用第五步得到的最优模型进行预测，查看模型的预测效果。
 
 
 
 
 
-### 示例代码片段
-
-#### 数据预处理
-```python
-from transformers import BertTokenizer
-
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
-def preprocess_text(text):
-    # 清洗文本
-    text = text.lower().strip()
-    # Tokenization
-    tokens = tokenizer(text, padding='max_length', truncation=True, max_length=512, return_tensors='pt')
-    return tokens
-```
-
-#### 数据抓取
-```python
-import requests
-from bs4 import BeautifulSoup
-
-def scrape_reviews(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    reviews = soup.find_all('div', class_='review-text')
-    return [review.get_text() for review in reviews]
-```
-
-#### 模型微调
-```python
-from transformers import BertForSequenceClassification, AdamW
-
-model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
-optimizer = AdamW(model.parameters(), lr=2e-5)
-
-# 训练循环
-for epoch in range(epochs):
-    model.train()
-    for batch in train_loader:
-        outputs = model(**batch)
-        loss = outputs.loss
-        loss.backward()
-        optimizer.step()
-```
-
----
-
-通过以上流程和代码示例，项目不仅展示了BERT模型在情感分类任务中的应用，还验证了其在新数据上的泛化能力，具有较强的实用性和技术深度。
