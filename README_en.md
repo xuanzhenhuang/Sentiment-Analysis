@@ -11,20 +11,13 @@ A project of sentiment polarity classification using a fine-tuned BERT model wri
 <details open>
 <summary><b>📕 Table of Contents</b></summary>
 
-- 💡 [What is RAGFlow?](#-Project Introduction)
-- 🎮 [Prerequisites](#-prerequisites)
-- 📌 [Latest Updates](#-latest-updates)
-- 🌟 [Key Features](#-key-features)
-- 🔎 [System Architecture](#-system-architecture)
-- 🎬 [Get Started](#-get-started)
-- 🔧 [Configurations](#-configurations)
-- 🔧 [Build a docker image without embedding models](#-build-a-docker-image-without-embedding-models)
-- 🔧 [Build a docker image including embedding models](#-build-a-docker-image-including-embedding-models)
-- 🔨 [Launch service from source for development](#-launch-service-from-source-for-development)
-- 📚 [Documentation](#-documentation)
-- 📜 [Roadmap](#-roadmap)
-- 🏄 [Community](#-community)
-- 🙌 [Contributing](#-contributing)
+- 💡 [Project Introduction](#-project-introduction)
+- 🌱 [Project Background](#-project-background)
+- 🍔 [Project Process](#-project-process)
+- 🔎 [Project Highlights](#-project-highlights)
+- 🎬 [Quick Start](#-quick-start)
+- 📝 [Prerequisites](#-prerequisites)
+- 🚀 [Execution Order](#-execution-order)
 
 </details>
 
