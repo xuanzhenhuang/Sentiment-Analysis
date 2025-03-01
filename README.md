@@ -3,6 +3,24 @@
 
 <img src="https://github.com/xuanzhenhuang/Sentiment-Analysis/blob/main/image/Predict.png?raw=true" width="1000px">
 
+<p align="center">
+   <a href="./README.md">简体中文</a> |
+   <a href="./README_en.md">English</a>
+</p>
+
+<details open>
+<summary><b>📕 Table of Contents</b></summary>
+
+- 💡 [项目介绍](#-项目介绍)
+- 🌱 [项目背景](#-项目背景)
+- 🍔 [项目流程](#-项目流程)
+- 🔎 [项目亮点](#-项目亮点)
+- 🎬 [快速开始](#-快速开始)
+- 📝 [前提条件](#-前提条件)
+- 🚀 [执行顺序](#-执行顺序)
+
+</details>
+
 
 ## 💡 项目介绍
 ### 🌱 项目背景
