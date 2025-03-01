@@ -1,8 +1,32 @@
 # 🔥 ***Sentiment-Analysis***
-A project of sentiment polarity classification using a fine-tuned BERT model written in Python. It conducts data analysis on the IMDB movie review dataset, and finally, you can obtain a classification model with an accuracy rate of over **90%**!
+A project of sentiment polarity classification using a fine-tuned BERT model written in Python. It conducts data analysis on the IMDB movie review dataset, and finally, you can obtain a classification model with an accuracy rate of over ** 90% **!
 
 <img src="https://github.com/xuanzhenhuang/Sentiment-Analysis/blob/main/image/Predict.png?raw=true" width="1000px">
 
+<p align="center">
+   <a href="./README.md">简体中文</a> |
+   <a href="./README_en.md">English</a>
+</p>
+
+<details open>
+<summary><b>📕 Table of Contents</b></summary>
+
+- 💡 [What is RAGFlow?](#-Project Introduction)
+- 🎮 [Prerequisites](#-prerequisites)
+- 📌 [Latest Updates](#-latest-updates)
+- 🌟 [Key Features](#-key-features)
+- 🔎 [System Architecture](#-system-architecture)
+- 🎬 [Get Started](#-get-started)
+- 🔧 [Configurations](#-configurations)
+- 🔧 [Build a docker image without embedding models](#-build-a-docker-image-without-embedding-models)
+- 🔧 [Build a docker image including embedding models](#-build-a-docker-image-including-embedding-models)
+- 🔨 [Launch service from source for development](#-launch-service-from-source-for-development)
+- 📚 [Documentation](#-documentation)
+- 📜 [Roadmap](#-roadmap)
+- 🏄 [Community](#-community)
+- 🙌 [Contributing](#-contributing)
+
+</details>
 
 ## 💡 Project Introduction
 ### 🌱 Project Background
